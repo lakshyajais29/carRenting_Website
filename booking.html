@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h2 class="heading">Enter Booking Details</h2>
+        
+        <!-- Customer Name -->
+        <input type="text" id="name" placeholder="Enter Your Name">
+        
+        <!-- Customer Phone Number -->
+        <input type="tel" id="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}">
+        
+        <!-- Date Selection -->
+        <input type="date" id="date" placeholder="Select Date">
+        
+        <!-- Time Selection -->
+        <input type="time" id="time" placeholder="Select Time">
+        
+        <!-- Additional Details -->
+        <textarea id="details" placeholder="Additional Details"></textarea>
+        
+        <!-- Submit Button -->
+        <button id="submit-btn" class="btn">Submit</button>
+    </div>
+
+    <!-- Footer with Price Form and Payment Options -->
+    <footer>
+        <div class="price-section">
+            <h3>Price List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Time</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Place 1</td>
+                        <td>Morning (9 AM - 12 PM)</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Place 1</td>
+                        <td>Afternoon (12 PM - 4 PM)</td>
+                        <td>₹700</td>
+                    </tr>
+                    <tr>
+                        <td>Place 2</td>
+                        <td>Morning (9 AM - 12 PM)</td>
+                        <td>₹600</td>
+                    </tr>
+                    <tr>
+                        <td>Place 2</td>
+                        <td>Afternoon (12 PM - 4 PM)</td>
+                        <td>₹800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="payment-options">
+            <h3>Payment Options</h3>
+            <div class="payment-methods">
+                <label for="credit-card">Credit/Debit Card</label>
+                <input type="radio" id="credit-card" name="payment-method">
+                <label for="paypal">PayPal</label>
+                <input type="radio" id="paypal" name="payment-method">
+                <label for="cash">Cash on Arrival</label>
+                <input type="radio" id="cash" name="payment-method">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function () {
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const details = document.getElementById("details").value;
+
+            if (!name || !phone || !date || !time) {
+                alert("Please fill in all required fields.");
+            } else {
+                alert("Thank you for your booking! Your booking details have been received. We'll contact you shortly!");
+                window.location.href = "index.html#thank-you";
+            }
+        });
+    </script>
+</body>
+</html>

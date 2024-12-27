@@ -24,19 +24,40 @@
         <div class="content">
             <h1 style="color: yellow;">Easy, Fast, Reliable<br>Your Car Rental Solution!</h1>
             <div class="search">
-                <input type="text" placeholder="Search Any Car">
-                <button type="submit">Search</button>
+                <!-- Updated: Location Dropdown -->
+                <select id="city" class="dropdown">
+                    <option value="" disabled selected>Select Location</option>
+                    <option value="New York">Delhi-NCR</option>
+                    <option value="Los Angeles">Mumbai</option>
+                    <option value="Chicago">Lucknow</option>
+                    <option value="Houston">Pune</option>
+                    <option value="Hourston">Surat</option>
+                    <option value="Housggton">Ghaziabad</option>
+                </select>
+
+                <!-- Updated: Multi-Car Selection Dropdown -->
+                <select id="cars" class="dropdown">
+                    <option value="" disabled selected>Select Car</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="Hatchback">Hatchback</option>
+                </select>
+
+                <!-- Updated: Search Button -->
+                <button type="submit" id="search-btn">Search</button>
             </div>
         </div>
     </div>
 
     <div class="form">
         <div class="box">
-            <input type="email" name="email" placeholder="Enter your email">
-            <input type="password" name="password" placeholder="Password">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Password">
         </div>
         <div class="link">
-            <a href="#">Log In</a>
+            <!-- Updated: Button for login -->
+            <button id="login-btn">Log In</button>
         </div>
         <div class="link1">
             <a href="#">Forgotten Password?</a>
@@ -85,5 +106,8 @@
     <footer>
         <p>&copy; 2024 Cars Hub. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
